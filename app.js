@@ -71,10 +71,11 @@ function handleGuess(correctSpot, userGuess) {
     // then if the user guess is correct, increment the correct guesses
     if (userGuess === true) {
         correctGuesses++;
-    } else if {
-        totalGuesses - correctGuesses;
+    } else {
+        totalGuesses - correctGuesses; 
     }
     // update the DOM to show this change to the user (including the losses, not tracked directly in state);
-winsEl.textContent = correctGuesses;
-totalEl.textContent = totalGuesses;
-lossesEl.textContent = totalGuesses - correctGuesses;
+    winsEl.textContent = correctGuesses;
+    totalEl.textContent = totalGuesses;
+    lossesEl.textContent = totalGuesses - correctGuesses;
+}
