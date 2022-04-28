@@ -74,7 +74,7 @@ function handleGuess(correctSpot, userGuess) {
         correctGuesses++;
         totalGuesses++;
     } else {
-        incorrectGuesses;
+        incorrectGuesses++;
         totalGuesses++;
     }
     // update the DOM to show this change to the user (including the losses, not tracked directly in state);
