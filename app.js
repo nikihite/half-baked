@@ -15,6 +15,7 @@ const winsEl = document.getElementById('wins');
 const hidingPlaces = ['tree', 'shed', 'boulder'];
 
 let correctGuesses = 0;
+let incorrectGuesses = 0;
 let totalGuesses = 0;
 
 shedButton.addEventListener('click', () => {
@@ -47,7 +48,7 @@ function handleGuess(correctSpot, userGuess) {
     boulderContainer.classList.remove('face');
 
     // then increment the guesses
-    if (userGuess === true || userGuess === false) {
+    if (handleGuess === true || handleGuess === false) {
         totalGuesses++;
     }
 
@@ -71,11 +72,13 @@ function handleGuess(correctSpot, userGuess) {
     // then if the user guess is correct, increment the correct guesses
     if (userGuess === true) {
         correctGuesses++;
+        totalGuesses++;
     } else {
-        totalGuesses - correctGuesses; 
+        incorrectGuesses;
+        totalGuesses++;
     }
     // update the DOM to show this change to the user (including the losses, not tracked directly in state);
     winsEl.textContent = correctGuesses;
     totalEl.textContent = totalGuesses;
-    lossesEl.textContent = totalGuesses - correctGuesses;
+    lossesEl.textContent = incorrectGuesses;
 }
