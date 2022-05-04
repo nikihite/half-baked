@@ -70,7 +70,7 @@ function handleGuess(correctSpot, userGuess) {
     }
 
     // then if the user guess is correct, increment the correct guesses
-    if (userGuess === true) {
+    if (userGuess === correctSpot) {
         correctGuesses++;
         totalGuesses++;
     } else {
